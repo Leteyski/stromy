@@ -46,18 +46,6 @@ class ViewController: UIViewController {
         
         display(weather: currentWeather)
         
-        let baseURL = URL(string: "https://api.darksky.net/forecast/\(forecastAPIKey)/")
-        let forecastURL = URL(string: "37.8267,-122.4233", relativeTo: baseURL)
-        
-        let configuration = URLSessionConfiguration.default
-        let session = URLSession(configuration: configuration)
-        
-        let request = URLRequest(url: forecastURL!)
-        let dataTask = session.dataTask(with: request) { data, response, error in
-        print(data!)
-        }
-        
-        dataTask.resume()
         
     }
 
@@ -75,7 +63,6 @@ class ViewController: UIViewController {
         currentWeatherIcon.image = weather.icon
     }
 
-// tesiting commit
     
     
 }
