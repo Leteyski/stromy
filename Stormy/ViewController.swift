@@ -49,8 +49,15 @@ class ViewController: UIViewController {
         let baseURL = URL(string: "https://api.darksky.net/forecast/\(forecastAPIKey)/")
         let forecastURL = URL(string: "37.8267,-122.4233", relativeTo: baseURL)
         
-        let weatherData = try! Data(contentsOf: forecastURL!)
-        let json = try! JSONSerialization.jsonObject(with: weatherData, options: [])
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration)
+        
+        let request = URLRequest(url: forecastURL!)
+        let dataTask = session.dataTask(with: request) { data, response, error in
+        print(data!)
+        }
+        
+        dataTask.resume()
         
     }
 
