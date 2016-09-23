@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    private let forecastAPIKey = "be76ceb070951d187c7a1cb87737badb"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,11 @@ class ViewController: UIViewController {
         
         display(weather: currentWeather)
         
+        let baseURL = URL(string: "https://api.darksky.net/forecast/\(forecastAPIKey)/")
+        let forecastURL = URL(string: "37.8267,-122.4233", relativeTo: baseURL)
+        
+        let weatherData = try! Data(contentsOf: forecastURL!)
+        let json = try! JSONSerialization.jsonObject(with: weatherData, options: [])
         
     }
 
