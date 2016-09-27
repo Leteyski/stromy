@@ -10,6 +10,7 @@
 		446F82D61D93FDB300EEE4AA /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F82D51D93FDB300EEE4AA /* CurrentWeather.swift */; };
 		446F82D91D94043900EEE4AA /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F82D81D94043900EEE4AA /* WeatherIcon.swift */; };
 		446F82DB1D957F2900EEE4AA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F82DA1D957F2900EEE4AA /* APIClient.swift */; };
+		44C97C151D9A7A32009062E0 /* ForecastClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C97C141D9A7A32009062E0 /* ForecastClient.swift */; };
 		97F14FE91CB9EEB20065EE08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F14FE81CB9EEB20065EE08 /* AppDelegate.swift */; };
 		97F14FEB1CB9EEB20065EE08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F14FEA1CB9EEB20065EE08 /* ViewController.swift */; };
 		97F14FEE1CB9EEB20065EE08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F14FEC1CB9EEB20065EE08 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		446F82D51D93FDB300EEE4AA /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		446F82D81D94043900EEE4AA /* WeatherIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 		446F82DA1D957F2900EEE4AA /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		44C97C141D9A7A32009062E0 /* ForecastClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastClient.swift; sourceTree = "<group>"; };
 		97F14FE51CB9EEB20065EE08 /* Stormy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stormy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F14FE81CB9EEB20065EE08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97F14FEA1CB9EEB20065EE08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				97F14FF11CB9EEB20065EE08 /* LaunchScreen.storyboard */,
 				97F14FF41CB9EEB20065EE08 /* Info.plist */,
 				446F82DA1D957F2900EEE4AA /* APIClient.swift */,
+				44C97C141D9A7A32009062E0 /* ForecastClient.swift */,
 			);
 			path = Stormy;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				97F14FEB1CB9EEB20065EE08 /* ViewController.swift in Sources */,
 				446F82D91D94043900EEE4AA /* WeatherIcon.swift in Sources */,
 				446F82D61D93FDB300EEE4AA /* CurrentWeather.swift in Sources */,
+				44C97C151D9A7A32009062E0 /* ForecastClient.swift in Sources */,
 				446F82DB1D957F2900EEE4AA /* APIClient.swift in Sources */,
 				97F14FE91CB9EEB20065EE08 /* AppDelegate.swift in Sources */,
 			);

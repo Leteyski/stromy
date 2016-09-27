@@ -10,6 +10,7 @@ import Foundation
 
 public let LETNetworkingErrorDomain = "com.leteyski.Stormy.NetworkingError"
 public let MissingHTTPResponseError: Int = 10
+public let UnexpectedResponseError: Int = 20
 
 typealias JSON = [String: AnyObject]
 typealias JSONTaskCompletion = (JSON?, HTTPURLResponse?, Error?) -> Void
@@ -67,6 +68,33 @@ extension APIClient {
         }
         return task
     }
+    
+    
+    func fetch<T>(request: URLRequest, parse: (JSON) -> T?, completion: (APIResult<T>) -> Void) {
+        
+        let task = JSONTaskWithRequest(request: request) { json, response, error in
+        
+            guard let json = json else {
+                if let error = error {
+                    completion(.Failure(error))
+                } else {
+                    // TODO: Implement Error Handling
+                }
+                return
+            }
+            
+            if let value = parse(json) {
+                completion(.Success(value))
+            } else {
+                let error = NSError(domain: LETNetworkingErrorDomain, code: UnexpectedResponseError, userInfo: nil)
+                completion(.Failure(error))
+            }
+        
+        }
+        
+        task.resume()
+    }
+    
     
 }
 
