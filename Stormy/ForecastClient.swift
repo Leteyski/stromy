@@ -18,7 +18,7 @@ enum Forecast: EndPoint {
     
     
     var baseURL: URL {
-        return URL(string: "https://api.forecast.io")!
+        return URL(string: "https://api.darksky.net")!
     }
     
     var path: String {
@@ -34,7 +34,7 @@ enum Forecast: EndPoint {
     }
 }
 
-final class ForecasteAPIClient: APIClient {
+final class ForecastAPIClient: APIClient {
     
     let configuration: URLSessionConfiguration
     
